@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe User do
-  it { should belong_to :account}
+  it { should have_many :orders}
   it { should validate_presence_of :email }
 
   subject { User.new(email: "test@test.com") }
