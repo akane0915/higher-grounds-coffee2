@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   end
 
   resources :order_items
+  resource :cart, only: [:show]
 end
