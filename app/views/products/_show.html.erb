@@ -15,10 +15,3 @@
 <p>Variety: <%= @product.variety %></p>
 
 <hr>
-
-<div id="reviews-section">
-</div>
-
-<% if current_user %>
-  <button><%= link_to "Add a review", new_product_review_path(@product), id: "new_review_link", remote: true %></button>
-<% end %>

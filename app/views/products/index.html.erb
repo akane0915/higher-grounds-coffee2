@@ -7,6 +7,14 @@
       <div class="coffee-bean well">
         <p><%= product.name %></p>
         <p><%= product.description%></p>
+
+        <% if current_user %>
+          <%= link_to "Add a review", new_product_review_path(product), id: "new_review_link", remote: true %>
+        <% end %>
+
+        <div id="reviews-section">
+        </div>
+
       </div>
     </div>
 
