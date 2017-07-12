@@ -7,6 +7,13 @@
       <div class="coffee-bean well">
         <p><%= product.name %></p>
         <p><%= product.description%></p>
+        <p><%= number_to_currency product.price %></p>
+
+        <%= form_for @order_item do |f| %>
+          <%= f.hidden_field :product_id, value: product.id %>
+          <%= f.number_field :quantity %>
+          <%= f.submit "Add to cart" %>
+        <% end %>
 
         <% if current_user %>
           <%= link_to "Add a review", new_product_review_path(product), id: "new_review_link", remote: true %>
