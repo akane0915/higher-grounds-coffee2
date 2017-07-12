@@ -1,4 +1,4 @@
-<h1><%= @product.name %> Coffee</h1>
+<h1><%= link_to @product.name %> Coffee</h1>
 
 <% if current_user.try(:admin?) %>
   <button><%= link_to "Edit", edit_product_path(@product) %></button>
