@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   resources :products do
     resources :reviews
   end
+
+  resources :order_items
 end
