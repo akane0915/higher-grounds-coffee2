@@ -1,14 +1,16 @@
 <h1>Coffee Beans</h1>
 
 <% @products.each do |product| %>
-  <div id="<%= product.id %>">
     <%= link_to product_path(product), remote: true do %>
+
+    <div id="<%= product.id %>">
       <div class="coffee-bean well">
         <p><%= product.name %></p>
         <p><%= product.description%></p>
       </div>
+    </div>
+    
     <% end %>
-  </div>
 <% end %>
 <% if current_user.try(:admin?) %>
   <button><%= link_to "New Product", new_product_path %></button>

@@ -1,1 +1,1 @@
- $('#<%= @product.id %>').hide().after(' <%= j render("show") %>')
+$('#<%= @product.id %>').html("<%= j render(partial: 'show') %>");
